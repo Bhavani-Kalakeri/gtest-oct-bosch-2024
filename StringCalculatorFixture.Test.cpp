@@ -33,4 +33,10 @@ TEST_F(StringCalculatorAddFixture, Return_1_For_1){
     ASSERT_EQ(actVal, expValue);
 }
 
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_2_Nums_With_Comma_Delimiter){
+    string input = "13,7";
+    int expValue = 20;
+    int actValue = objUnderTest->Add(input);
 
+    ASSERT_EQ(actVal, expValue);
+}
