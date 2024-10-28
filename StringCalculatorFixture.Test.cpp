@@ -12,4 +12,25 @@ void TearDown() override{
 }
 };
 
+TEST_F(StringCalculatorAddFixture, Returns_0_For_Empty){
+    string input="";
+    int expectedValue=0;
+    int actualValue=objUnderTest->Add(input);
+    ASSERT_EQ(actualValue,expectedValue);
+}
+TEST_F(StringCalculatorAddFixture, Returns_0_For_0){
+    string input="0";
+    int expectedValue=0;
+    int actualValue=objUnderTest->Add(input);
+    ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST_F(StringCalculatorAddFixture, Return_1_For_1){
+    string input = "1";
+    int expValue = 1;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
+
 
