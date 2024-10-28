@@ -88,9 +88,9 @@ TEST(string_calculator_add, when_passed_negative_nums_throws_an_exception_listin
   //}
   //catch(
 
-  ASSERT_THROW(
-  {objUnderTest.Add(input);}
-  ,std::invalid_argument;)
+  ASSERT_THROW({
+    objUnderTest.Add(input); 
+    },std::invalid_argument);
   
 }
 
