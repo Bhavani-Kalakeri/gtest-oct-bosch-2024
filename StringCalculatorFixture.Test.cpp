@@ -64,3 +64,27 @@ TEST_F(StringCalculatorAddFixture, Return_Sum_For_Nums_Ignore_Nums_Over_1000){
 
     ASSERT_EQ(actVal, expValue);
 }
+
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_Nums_With_Multiple_Delimiters){
+    string input = "*[//]7[***]//[~~]1??2";
+    int expValue = 10;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
+
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_Each_Delimiter_With_Multiple_Delimiters){
+    string input = "[*]/[/]7[*]//~~1\n2";
+    int expValue = 10;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
+
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_Nums_With_Multichar_Delimiters){
+    string input = "[~*]//7[*//~~]1\n2";
+    int expValue = 10;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
