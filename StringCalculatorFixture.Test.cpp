@@ -40,3 +40,27 @@ TEST_F(StringCalculatorAddFixture, Return_Sum_For_2_Nums_With_Comma_Delimiter){
 
     ASSERT_EQ(actVal, expValue);
 }
+
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_Multiple_Comma_Delimiters){
+    string input = "1,3,13";
+    int expValue = 17;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
+
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_Newline_and_Comma_Delimiters){
+    string input = "1\n3,13";
+    int expValue = 17;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
+
+TEST_F(StringCalculatorAddFixture, Return_Sum_For_Nums_Ignore_Nums_Over_1000){
+    string input = "1\n3,1003,13";
+    int expValue = 17;
+    int actValue = objUnderTest->Add(input);
+
+    ASSERT_EQ(actVal, expValue);
+}
