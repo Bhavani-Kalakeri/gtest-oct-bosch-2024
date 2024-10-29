@@ -36,7 +36,7 @@ TEST_P(StringCalculatorAddParameterizedFixture, DataDrivenTestCase){
    
     int actValue=objUnderTest->Add(input);
     
-    ASSERT_EQ(actualValue,expectedValue);
+    ASSERT_EQ(actValue,expValue);
 }
 
 //negetive case test
