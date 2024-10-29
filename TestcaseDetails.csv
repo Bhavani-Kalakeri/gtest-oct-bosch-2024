@@ -2,4 +2,6 @@ Sl No	Testcase Name	Testcase Scenario	Inputs/Pre-condition	Expected Output
 1	ValidateSpeedThresholdRange	Check if the speed in km is within the range 1-100, if not log an error.	int currentSpeedInKmph	Log message if the speed is in range
 2	ValidateCurrentSpeed	(i) Check if the current speed exceeds threshold speed, if yes then convert kmph to mph. (ii) Form a message with this mph value. Send this message to Cloud communicator and expect a return code. (iii) Verify the return code if it's lesss than 400, if not log an error. 	int currentSpeedInKmph, string message, expected return code range = 400	message created with mph value, error log if return code exceeds 400. 
 3	GetCurrentSpeed	Get current speed in kmph from BNF Speed Sensor	-	currentSpeedInKmph
-4				
+4	InstantiateSpeedMonitorwithThresholdSpeed	Create an instance of SpeedMonitor with speed threshold		_speedThreshold
+5	InstantiateBNFSpeedSensor			
+6	InstantiateIOTCloudCommunicator			
