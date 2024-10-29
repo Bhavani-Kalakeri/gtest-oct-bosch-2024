@@ -27,7 +27,7 @@ make_tuple("",0), make_tuple("0",0), make_tuple("1",1),  //single values sum
 make_tuple("1,2",3), //two num sum
 make_tuple("3,13,1",17), 
 make_tuple("3\n13\n1\n",17),  //new line delimiter
-make_tuple("*%1,\n13//",14));  //multiple delimiters
+make_tuple("*%1,\n13//",14)));  //multiple delimiters
 
 //parameterized test
 TEST_P(StringCalculatorAddParameterizedFixture, DataDrivenTestCase){
